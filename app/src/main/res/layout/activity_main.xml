@@ -2,62 +2,34 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Duration:"
-            />
-        <EditText
-            android:id="@+id/duration"
+        <LinearLayout
+            android:id="@+id/llFA"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Seconds"
-            android:inputType="number"
-            android:textSize="14sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Frequency:"
-            android:layout_marginTop="5dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/freq"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="20Hz - 20kHz"
-            android:textSize="14sp"/>
+            </android.support.v7.widget.RecyclerView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Amplitude:"
-            android:layout_marginTop="5dp"/>
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:min="0"
-            android:max="100"
-            android:progress="100"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Channel"
+                android:id="@+id/addChannel"/>
 
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Play"
-            android:layout_marginTop="20dp"/>
-    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </layout>

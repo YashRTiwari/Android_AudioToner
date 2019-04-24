@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center_vertical"
+        android:padding="2dp">
+
+
+        <EditText
+            android:id="@+id/edtFreq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Frequency"
+            android:textSize="14sp"
+            />
+
+        <EditText
+            android:id="@+id/edtAmplitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:inputType="number"
+            android:hint="Amplitude"
+            android:textSize="14sp"
+            />
+
+        <ImageButton
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="2dp"
+            />
+
+        <ImageButton
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_delete"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="2dp"
+            />
+
+    </LinearLayout>
+
+</layout>
