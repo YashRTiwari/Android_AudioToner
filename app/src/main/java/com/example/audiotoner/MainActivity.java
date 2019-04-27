@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements RvAddRowChannelAd
 
     private final String TAG = getClass().getName();
     private int sampleRate = 44100;
-    private int numSamples = 300 * sampleRate;
+    private int numSamples = 100 * sampleRate;
     private double sample[] = new double[numSamples];
 
     private HashMap<Integer, AudioTrack> audioTrackList;
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements RvAddRowChannelAd
         setContentView(R.layout.activity_main);
 
         audioTrackList = new HashMap<>();
-        Log.d(TAG, "onCreate: " + numSamples);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements RvAddRowChannelAd
     private AudioTrack playSound(byte[] generatedSnd, int volume) {
         AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,
                 sampleRate,
-                AudioFormat.CHANNEL_IN_STEREO,
+                AudioFormat.CHANNEL_IN_DEFAULT,
                 AudioFormat.ENCODING_PCM_16BIT,
                 numSamples,
                 AudioTrack.MODE_STATIC);
@@ -119,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements RvAddRowChannelAd
                             audioTrack.play();
                             Log.d(TAG, "doInBackground: " + i);
                             try {
-                                Thread.sleep(60_000);
+                                Thread.sleep(20_000);
                                 audioTrack.stop();
                             } catch (Exception e) {
 
