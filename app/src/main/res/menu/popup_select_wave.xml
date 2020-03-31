@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sine"
+        android:title="Sine wave"
+        android:icon="@drawable/sinewave"/>
+
+    <item
+        android:id="@+id/square"
+        android:title="Square wave"
+        android:icon="@drawable/squarewave"/>
+
+    <item
+        android:id="@+id/sawtooth"
+        android:title="Sawtooth wave"
+        android:icon="@drawable/sawtooth"/>
+
+</menu>

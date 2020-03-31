@@ -6,49 +6,97 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:gravity="center_vertical"
+        android:weightSum="3"
+        android:gravity="center"
         android:padding="2dp">
 
 
         <EditText
             android:id="@+id/edtFreq"
-            android:layout_width="0dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:inputType="number"
-            android:hint="Frequency"
             android:textSize="14sp"
+            android:imeOptions="actionNext"
             />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
 
         <EditText
             android:id="@+id/edtAmplitude"
-            android:layout_width="0dp"
+            android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
             android:inputType="number"
-            android:hint="Amplitude"
             android:textSize="14sp"
             />
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+
+
+        <ImageButton
+            android:id="@+id/ivSinewave"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:src="@drawable/sinewave"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+
+        <ImageButton
+            android:id="@+id/ivSquarewave"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:src="@drawable/squarewave"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+
+
         <ImageButton
             android:id="@+id/ivPlay"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_play"
             android:background="@android:color/transparent"
-            android:layout_marginRight="2dp"
+            android:layout_weight="1"
             />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
 
         <ImageButton
             android:id="@+id/ivDelete"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_delete"
             android:background="@android:color/transparent"
-            android:layout_marginRight="2dp"
+            android:layout_weight="1"
             />
 
     </LinearLayout>
